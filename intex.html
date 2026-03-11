@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahamed Abdul Nazeer | Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            margin: 0; 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--primary); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 2.8rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+        }
+
+        header p { 
+            font-size: 1.2rem; 
+            opacity: 0.9; 
+            margin-top: 10px; 
+            font-weight: 300;
+        }
+        
+        .container { 
+            max-width: 900px; 
+            margin: -60px auto 40px; 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+        }
+        
+        h2 { 
+            border-left: 5px solid var(--secondary); 
+            padding-left: 15px; 
+            color: var(--primary); 
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px; 
+            background: #f9f9f9; 
+            padding: 25px; 
+            border-radius: 10px; 
+            margin-top: 20px;
+        }
+
+        .contact-item { 
+            text-decoration: none; 
+            color: var(--text); 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .contact-item:hover { color: var(--secondary); }
+
+        .experience-card { 
+            margin-bottom: 30px; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 20px; 
+        }
+
+        .job-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline; 
+            flex-wrap: wrap; 
+            margin-bottom: 5px;
+        }
+
+        .job-title { font-weight: bold; color: var(--secondary); font-size: 1.2rem; }
+        .job-date { color: #7f8c8d; font-size: 0.9rem; font-weight: 600; }
+        .job-loc { font-style: italic; color: #95a5a6; font-size: 0.9rem; margin-bottom: 10px; }
+
+        .skills-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            margin-top: 15px; 
+        }
+
+        .skill-tag { 
+            background: #eef2f3; 
+            color: var(--primary); 
+            padding: 6px 16px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            border: 1px solid #dcdde1; 
+            font-weight: 500;
+        }
+
+        .edu-item { margin-bottom: 20px; }
+        
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            color: #7f8c8d; 
+            font-size: 0.9rem; 
+        }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        @media (max-width: 600px) { 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 2rem; }
+            .container { margin: -30px 15px 40px; padding: 25px; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AHAMED ABDUL NAZEER</h1>
+    <p>Senior IT Support Engineer | Infrastructure Specialist</p>
+</header>
+
+<div class="container">
+    <h2>Summary</h2>
+    <p>Results-driven IT Support Engineer with <b>7+ years of experience</b> in managing enterprise IT infrastructure. Expert in deploying, configuring, and troubleshooting Windows environments to ensure zero business interruption. Proven track record in optimizing workflows through proactive system monitoring and Active Directory management.</p>
+
+    <h2>Technical Expertise</h2>
+    <div class="skills-container">
+        <span class="skill-tag">Active Directory & GPO</span>
+        <span class="skill-tag">Firewall Management (pfSense)</span>
+        <span class="skill-tag">Zoho Creator & AppSheet</span>
+        <span class="skill-tag">Network Troubleshooting</span>
+        <span class="skill-tag">Endpoint Protection</span>
+        <span class="skill-tag">SLA Management</span>
+        <span class="skill-tag">Root Cause Analysis (RCA)</span>
+        <span class="skill-tag">Asset Lifecycle Management</span>
+    </div>
+
+    <h2>Professional Experience</h2>
+    
+    <div class="experience-card">
+        <div class="job-header">
+            <span class="job-title">Noor Fanos Trading Company</span>
+            <span class="job-date">FEB 2024 – PRESENT</span>
+        </div>
+        <div class="job-loc">IT Support Engineer - Buraidha, Al-qassim, KSA</div>
+        <ul>
+            <li>Managed Windows Active Directory, Domain Controllers, and GPOs for enhanced security.</li>
+            <li>Configured and optimized firewall settings to safeguard company data.</li>
+            <li>Maintained 100% hardware readiness and software compliance.</li>
+            <li>Resolved complex technical issues through remote screen-sharing.</li>
+        </ul>
+    </div>
+
+    <div class="experience-card">
+        <div class="job-header">
+            <span class="job-title">Astar Mobiles Pvt Ltd</span>
+            <span class="job-date">AUG 2020 – SEP 2023</span>
+        </div>
+        <div class="job-loc">IT Support Engineer - Chennai, India</div>
+        <ul>
+            <li>Resolved cross-platform hardware/software issues for high-priority requests.</li>
+            <li>Conducted root cause analysis (RCA) via remote diagnostics.</li>
+            <li>Collaborated with senior managers for strategic solutions to critical issues.</li>
+        </ul>
+    </div>
+
+    <div class="experience-card">
+        <div class="job-header">
+            <span class="job-title">Skypro Technologies Pvt Ltd</span>
+            <span class="job-date">DEC 2018 – MAR 2020</span>
+        </div>
+        <div class="job-loc">IT Support Engineer - Bangalore, India</div>
+        <ul>
+            <li>Managed high-volume service tickets ensuring SLA compliance.</li>
+            <li>Deployed and monitored enterprise-grade antivirus software.</li>
+            <li>Standardized desktop configurations across the organization.</li>
+        </ul>
+    </div>
+
+    <h2>Education</h2>
+    <div class="edu-item">
+        <b>BE in Electronics and Communication Engineering</b> <br>
+        MET Engineering College | 2015-2018 
+    </div>
+    <div class="edu-item">
+        <b>Diploma in Computer Science and Engineering</b> <br>
+        Noorul Islam Polytechnic College | 2013-2015 
+    </div>
+
+    <h2>Languages</h2>
+    <p>English, Tamil </p>
+
+    <h2>Contact Information</h2>
+    <div class="contact-grid">
+        <a href="mailto:ahamedabdulnazeer96@gmail.com" class="contact-item">📧 ahamedabdulnazeer96@gmail.com</a>
+        <a href="tel:+966552152442" class="contact-item">🇸🇦 +966-552152442</a>
+        <a href="tel:+916381139226" class="contact-item">🇮🇳 +91-6381139226</a>
+        <div class="contact-item">📍 Buraidha, Al-Qassim, KSA</div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Ahamed Abdul Nazeer | Built for Professional Excellence
+</footer>
+
+</body>
+</html>
