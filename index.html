@@ -111,13 +111,34 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.03);
         }
 
+
         .profile-pic-container {
             position: relative;
             margin-bottom: 25px;
         }
 
+		.profile-pic-container::before 
+		{
+		    content: '';
+		    position: absolute;
+		    width: 195px; height: 195px;
+		    border-radius: 50%;
+		    border: 2px solid var(--accent);
+		    border-top-color: transparent;
+		    border-bottom-color: transparent;
+		    animation: spin 2s linear infinite;
+		}
+		
+		@keyframes spin 
+		{
+   			from { transform: rotate(0deg); }
+    		to { transform: rotate(360deg); }
+		}
+
+
+
         .profile-pic {
-            width: 170px; height: 170px;
+            width: 200px; height: 200px;
             border-radius: 50%;
             object-fit: cover;
             border: 8px solid #fff;
@@ -183,24 +204,35 @@
 		{
 			position: relative;
             background: #fff;
-            border: 1px solid rgba(79, 70, 229, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
             padding: 30px;
             border-radius: 24px;
             margin-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			overflow: hidden;
         }
 
 
         glass-card:hover 
 		{
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+            transform: scale(1.02) translateY(-10px) !important;
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.1) !important;
             border-color: var(--accent);
-			background: #fff;
+			background: rgba(255, 255, 255, 1) !important;
         }
+		h1 
+		{
+		    background: linear-gradient(90deg, #1e293b, #4f46e5, #1e293b);
+		    background-size: 200% auto;
+		    -webkit-background-clip: text;
+		    -webkit-text-fill-color: transparent;
+		    animation: shimmer 4s linear infinite;
+		}
 
+@keyframes shimmer {
+    to { background-position: 200% center; }
+}
 
         .progress-track 
 		{
@@ -585,6 +617,23 @@
         document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
         document.getElementById('link-' + id).classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+	const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.glass-card').forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+    card.style.transition = "all 0.6s ease-out";
+    observer.observe(card);
+});
     }
 </script>
 
