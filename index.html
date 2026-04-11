@@ -266,11 +266,30 @@
         /* Mobile Responsive */
         @media (max-width: 900px) {
             nav {
-                left: 0; top: auto; bottom: 0;
-                width: 100%; height: 70px;
-                flex-direction: row; justify-content: space-around;
-                border-radius: 25px 25px 0 0; transform: none;
-            }
+        left: 0; 
+        right: 0; /* Left and Right 0 vachaa screen-oda rendu pakkamum kachithama ottippoagum */
+        top: auto; 
+        bottom: 0;
+        width: 100vw; /* Viewport width use pannuvathu innum accurate-ah irukkum */
+        max-width: 100%; 
+        height: 70px;
+        flex-direction: row; 
+        justify-content: space-around;
+        border-radius: 20px 20px 0 0; /* Mobile-la kela otti irukkum, so bottom radius thevaiyillai */
+        transform: none;
+        padding: 0 10px; /* Icons edge-la ottama irukka */
+        box-sizing: border-box; /* Padding width-ah increase pannaama paathukkum */
+    }
+    
+    /* Mobile-la indicator (blue line) top-la vara mathiri fix */
+    nav a.active::after {
+        left: 50%;
+        top: -10px;
+        width: 15px;
+        height: 4px;
+        transform: translateX(-50%);
+        border-radius: 0 0 10px 10px;
+    }
             .profile-container {
                 position: relative; width: 100%; left: 0; top: 0; margin-bottom: 30px;
                 height: auto;
